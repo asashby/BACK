@@ -45,7 +45,7 @@ function obtenerConexion()
     $password = obtenerVariableDelEntorno("MYSQL_PASSWORD");
     $user = obtenerVariableDelEntorno("MYSQL_USER");
     $dbName = obtenerVariableDelEntorno("MYSQL_DATABASE_NAME");
-    $database = new PDO('mysql:host=remotemysql.com;dbname=' . $dbName, $user, $password);
+    $database = new PDO('mysql:host=sql4.freesqldatabase.com;dbname=' . $dbName, $user, $password);
     $database->query("set names utf8;");
     $database->setAttribute(PDO::ATTR_EMULATE_PREPARES, FALSE);
     $database->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
